@@ -6,7 +6,10 @@
 3. [Descripción de los Archivos y Carpetas](#descripción-de-los-archivos-y-carpetas)  
 4. [Explicación del Código](#explicación-del-código)  
    - [Módulo/Archivo 1](#móduloarchivo-1)  
-   - [Módulo/Archivo 2](#móduloarchivo-2)  
+   - [Módulo/Archivo 2](#móduloarchivo-2)
+5. [Ejemplos de Uso](#ejemplos-de-uso)  
+6. [Pruebas](#pruebas)  
+7. [Referencias](#referencias) 
 ---
 
 ## **Introducción**  
