@@ -46,15 +46,19 @@ Explicación:
 - **Module 5: Close Database Connection**: Cierra la conexión a la base de datos cuando ya no es necesaria.
 
 ## **Code Explanation**  
-
-### **ScoreDisplay: User Authentication**  
-```plaintext
-#Codigoooooooo 
-# Module 1: User Authentication
-def authenticate_user(username, password):
-    if username in users_db and users_db[username] == password:
-### **Module 1: User Authentication**  
+**Ports declaration**
+```vhdl
+port(
+        RST : in std_logic;
+        Clock : in std_logic;
+        dir: in std_logic;
+        pos : out std_logic_vector(3 downto 0);
+        player_1_point: out std_logic_vector(3 downto 0);
+        player_2_point: out std_logic_vector(3 downto 0);
+        reset_speed: out std_logic := '0'
+    );
 ```
+For this block we use 3 inputs, in this case it gives the logic for adding points to each player
 ### **LED_Loop: User Authentication**  
 ```plaintext
 #Codigoooooooo 
