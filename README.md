@@ -47,7 +47,7 @@ In this case you also have to add the button circuits to Power, Ground and espec
 
 # Setup (using [Vivado](https://www.xilinx.com/support/download.html))
 1. Code and Hardware preparation (listed above)
-2. Create the Vivado project for your FPGA, import the sources and contrains(`.xdc`)
+2. Create the Vivado project for your FPGA, import the sources and constraints(`.xdc`)
 3. Generate the bitstream for your Board
 4. Upload the Bitstream / Program the Device
 5. Enjoy
