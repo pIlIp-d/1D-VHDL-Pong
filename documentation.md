@@ -38,3 +38,16 @@ Incluye una vista general de la estructura de archivos y carpetas del repositori
 ## **Description of Files and Folders**  
 This section provides an overview of the project's file and folder structure, explaining what each file contains and its purpose.
 
+## **Project Structure**  
+Incluye una vista general de la estructura de archivos y carpetas del repositorio, con una breve explicación de su contenido.  
+
+```plaintext
+├── carpeta1/  
+│   ├── archivo1.py  # Breve descripción  
+│   ├── archivo2.py  # Breve descripción  
+├── carpeta2/  
+│   ├── archivo3.py  # Breve descripción  
+├── README.md         # Instrucciones generales  
+├── documentation.md  # Documentación detallada  
+---
+
