@@ -52,6 +52,8 @@ In this case you also have to add the button circuits to Power, Ground and espec
 4. Upload the Bitstream / Program the Device
 5. Enjoy
 
+# Documentation
+For more detailed information on how it works see: [documentation.md](./documentation.md).
 
 # Credits
 This project was created by:
