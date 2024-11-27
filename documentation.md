@@ -40,12 +40,12 @@ Incluye una vista general de la estructura de archivos y carpetas del repositori
 ```
 ## **Description of Files and Folders**  
 Explicación:
-- **Ports declaration: Este módulo se encarga de autenticar a un usuario usando las credenciales proporcionadas.
-- **LED_Loop:Crea una sesión para un usuario autenticado, guardando el nombre de usuario y la hora de inicio.
-- **GameLogicLED:Conecta a la base de datos utilizando `sqlite3`.
-- **Game:Ejecuta una consulta SQL proporcionada a la base de datos.
-- **DisplayDecoder:Cierra la conexión a la base de datos cuando ya no es necesaria.
-- **Basys3: Cierra la conexión a la base de datos cuando ya no es necesaria.
+- **Ports declaration**: Este módulo se encarga de autenticar a un usuario usando las credenciales proporcionadas.
+- **LED_Loop**:Crea una sesión para un usuario autenticado, guardando el nombre de usuario y la hora de inicio.
+- **GameLogicLED**:Conecta a la base de datos utilizando `sqlite3`.
+- **Game**:Ejecuta una consulta SQL proporcionada a la base de datos.
+- **DisplayDecoder**:Cierra la conexión a la base de datos cuando ya no es necesaria.
+- **Basys3**: Cierra la conexión a la base de datos cuando ya no es necesaria.
 
 ## **Code Explanation**  
 **Ports declaration**
