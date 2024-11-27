@@ -45,44 +45,50 @@ Explicación:
 
 ## **Code Explanation**  
 
-### **Module 1: User Authentication**  
+### **ScoreDisplay: User Authentication**  
 ```plaintext
+#Codigoooooooo 
 # Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
 ### **Module 1: User Authentication**  
 ```
-### **Module 2: User Authentication**  
+### **LED_Loop: User Authentication**  
 ```plaintext
+#Codigoooooooo 
 # Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
 ### **Module 1: User Authentication**  
 ```
-### **Module 3: User Authentication**  
+### **GameLogicLED: User Authentication**  
 ```plaintext
+#Codigoooooooo 
 # Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
 ### **Module 1: User Authentication**  
 ```
-### **Module 4: User Authentication**  
+### **Game: User Authentication**  
 ```plaintext
+#Codigoooooooo 
 # Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
 ### **Module 1: User Authentication**  
 ```
-### **Module 5: User Authentication**  
+### **DisplayDecoder: User Authentication**  
 ```plaintext
+#Codigoooooooo 
 # Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
 ### **Module 1: User Authentication**  
 ```
-### **Module 6: User Authentication**  
+### **Basys3: User Authentication**  
 ```plaintext
-# Module 1: User Authentication
+#Codigoooooooo 
+# Module 6: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
 ### **Module 1: User Authentication**  
