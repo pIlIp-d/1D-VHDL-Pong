@@ -34,15 +34,15 @@ Incluye una vista general de la estructura de archivos y carpetas del repositori
 ├── README.md         # Instrucciones generales  
 ├── documentation.md  # Documentación detallada  
 ---
-
 ## **Description of Files and Folders**  
 This section provides an overview of the project's file and folder structure, explaining what each file contains and its purpose.
 
-```plaintext
+```
 ├── folder1/  
-│   ├── file1.py  # Main file handling user authentication  
-│   ├── file2.py  # Helper functions for data processing  
+│   ├── file1.py  # Brief description  
+│   ├── file2.py  # Brief description  
 ├── folder2/  
-│   ├── file3.py  # Handles database connections and queries  
+│   ├── file3.py  # Brief description  
 ├── README.md      # General instructions and project overview  
 ├── documentation.md  # Detailed documentation for the project
+
