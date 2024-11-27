@@ -1,6 +1,8 @@
 # 1D-VHDL-Pong
 Hands-on 1D Pong game development using VHDL and the Basys 3, perfect for beginners in FPGA design.
 
+![An image showcaseing the Basys-3 Board with a breadboard for the buttons.](./showcase.png)
+
 # Preperations and Usage 
 This 1D Pong game is played by two players, each controlling one push button. The game itself is played on the LEDs of the FPGA (Basys-3) board and the goal is to prevent the "LED ball" from reaching the end of your side.
 
