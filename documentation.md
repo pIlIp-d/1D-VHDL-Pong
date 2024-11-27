@@ -2,14 +2,14 @@
 
 ## **Index**  
 1. [Introduction](#introduction)  
-2. [Project Structure](#project_structure)  
+2. [Project Structure](#project-structure)  
 3. [Description of Files and Folders](#description-of-files-and-folders)  
-4. [Code Explanation](#code_explanation)  
-   - [Módulo/Archivo 1](#móduloarchivo-1)  
-   - [Módulo/Archivo 2](#móduloarchivo-2)
-5. [Implementation Examples](#implementation_examples)  
+4. [Code Explanation](#code-explanation)  
+   - [Module/File 1](#modulefile-1)  
+   - [Module/File 2](#modulefile-2)  
+5. [Implementation Examples](#implementation-examples)  
 6. [Evidence](#evidence)  
-7. [References](#references) 
+7. [References](#references)
 ---
 
 ## **Introduction**  
