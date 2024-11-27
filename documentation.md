@@ -52,7 +52,7 @@ def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
 ### **Module 1: User Authentication**  
 ```
-# Module 2: User Authentication
+###Module 2: User Authentication**
 ```plaintext
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
