@@ -36,18 +36,23 @@ Incluye una vista general de la estructura de archivos y carpetas del repositori
 ---
 ```
 ## **Description of Files and Folders**  
-This section provides an overview of the project's file and folder structure, explaining what each file contains and its purpose.
+Explicación:
+- **Module 1: User Authentication**: Este módulo se encarga de autenticar a un usuario usando las credenciales proporcionadas.
+- **Module 2: Session Creation**: Crea una sesión para un usuario autenticado, guardando el nombre de usuario y la hora de inicio.
+- **Module 3: Database Connection**: Conecta a la base de datos utilizando `sqlite3`.
+- **Module 4: Execute Database Queries**: Ejecuta una consulta SQL proporcionada a la base de datos.
+- **Module 5: Close Database Connection**: Cierra la conexión a la base de datos cuando ya no es necesaria.
 
-## **Project Structure**  
-Incluye una vista general de la estructura de archivos y carpetas del repositorio, con una breve explicación de su contenido.  
+## **Code Explanation**  
 
-```plaintext
-├── carpeta1/  
-│   ├── archivo1.py  # Breve descripción  
-│   ├── archivo2.py  # Breve descripción  
-├── carpeta2/  
-│   ├── archivo3.py  # Breve descripción  
-├── README.md         # Instrucciones generales  
-├── documentation.md  # Documentación detallada  
----
+### **Module 1: User Authentication**  
+```python
+# Module 1: User Authentication
+def authenticate_user(username, password):
+    if username in users_db and users_db[username] == password:
+        session = create_session(username)
+        return session
+    else:
+        return None
+
 
