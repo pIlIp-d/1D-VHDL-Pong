@@ -32,7 +32,7 @@ AND
 
 ### Options 2: Using external buttons
 
-You can leave the constraints as they are, but you need to add the button circuits.
+You can leave the constraints as they are, but you need to add the button circuits to Power, Ground and especially the GPIOs .
 
 ![Image showing the circuit for the input button.](circuit.png)
 
