@@ -1,18 +1,18 @@
-# **Documentación del Proyecto**  
+# **Project Documentation**  
 
-## **Índice**  
-1. [Introducción](#introducción)  
-2. [Estructura del Proyecto](#estructura-del-proyecto)  
-3. [Descripción de los Archivos y Carpetas](#descripción-de-los-archivos-y-carpetas)  
-4. [Explicación del Código](#explicación-del-código)  
+## **Index**  
+1. [Introduction](#introduction)  
+2. [Project Structure](#project_structure)  
+3. [Description of Files and Folders](#description-of-files-and-folders)  
+4. [Code Explanation](#code_explanation)  
    - [Módulo/Archivo 1](#móduloarchivo-1)  
    - [Módulo/Archivo 2](#móduloarchivo-2)
-5. [Ejemplos de Uso](#ejemplos-de-uso)  
-6. [Pruebas](#pruebas)  
-7. [Referencias](#referencias) 
+5. [Implementation Examples](#implementation_examples)  
+6. [Evidence](#evidence)  
+7. [References](#references) 
 ---
 
-## **Introducción**  
+## **Introduction**  
 Proporciona un resumen general del propósito de este documento.  
 - ¿Qué busca explicar?  
 - ¿Qué nivel de detalle se proporciona?  
@@ -22,7 +22,7 @@ Proporciona un resumen general del propósito de este documento.
 
 ---
 
-## **Estructura del Proyecto**  
+## **Project Structure**  
 Incluye una vista general de la estructura de archivos y carpetas del repositorio, con una breve explicación de su contenido.  
 
 ```plaintext
