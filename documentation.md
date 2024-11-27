@@ -52,54 +52,39 @@ def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
 ### **Module 1: User Authentication**  
 ```
-###Module 2: User Authentication**
+### **Module 2: User Authentication**  
 ```plaintext
+# Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
-        session = create_session(username)
-        session = create_session(username)
-        return session
-    else:
-        return None
+### **Module 1: User Authentication**  
 ```
-# Module 3: User Authentication
+### **Module 3: User Authentication**  
 ```plaintext
+# Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
-        session = create_session(username)
-        session = create_session(username)
-        return session
-    else:
-        return None
+### **Module 1: User Authentication**  
 ```
-# Module 4: User Authentication
+### **Module 4: User Authentication**  
 ```plaintext
+# Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
-        session = create_session(username)
-        session = create_session(username)
-        return session
-    else:
-        return None
+### **Module 1: User Authentication**  
 ```
-# Module 5: User Authentication
+### **Module 5: User Authentication**  
 ```plaintext
+# Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
-        session = create_session(username)
-        session = create_session(username)
-        return session
-    else:
-        return None
+### **Module 1: User Authentication**  
 ```
-# Module 6: User Authentication
+### **Module 6: User Authentication**  
 ```plaintext
+# Module 1: User Authentication
 def authenticate_user(username, password):
     if username in users_db and users_db[username] == password:
-        session = create_session(username)
-        session = create_session(username)
-        return session
-    else:
-        return None
-
+### **Module 1: User Authentication**  
+```
 
