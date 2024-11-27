@@ -11,9 +11,8 @@
    - [Game](#Game)
    - [DisplayDecoder](#DisplayDecoder)
    - [Basys3](#Basys3)
-5. [Implementation Examples](#implementation-examples)  
-6. [Evidence](#evidence)  
-7. [References](#references)
+5. [Evidence](#evidence)  
+6. [References](#references)
 ---
 
 ## **Introduction**  
