@@ -48,6 +48,41 @@ Explication:
 - **Basys3**:
 
 ## **Code Explanation**  
+### **LED_Loop**
+Code for [src/LED_Loop.vhd](./LED_Loop)
+**Ports declaration**
+```vhdl
+entity LED_Loop is
+    port(
+        Clock : in std_logic;
+        divider: in std_logic_vector(7 downto 0);
+        CLK_out : out std_logic
+    );
+end LED_Loop;
+```
+This file uses the clock provided from the Basys Board. Gets the divider signal from an external signal in order to slow down on a certain amount the LEDs movement.
+**Signals**
+```vhdl
+        CLK_out <= '0';
+        if (counter >= divider) then
+            if not (old_divider = divider) then
+                old_divider <= divider;
+            end if;
+        end if;
+```
+Everytime counter is reset, divider changes according to the stated value took from the position.
+```vhdl
+            multiplicator_counter <= multiplicator_counter + 1;
+            if (multiplicator_counter = divider_multiplicator) then
+                CLK_out <= '1';
+                multiplicator_counter <= "0000000000000000";
+            end if;
+        elsif (Clock'event and Clock = '1') then
+            counter <= counter + 1;
+```
+The counter is adding every time there is a rising edge. Meaning it will be slowed down or sped up according to divider.
+### **GameLogicLED**
+Code for [src/GameLoopLED.vhd](./GameLoopLED)
 **Ports declaration**
 ```vhdl
 port(
@@ -60,45 +95,23 @@ port(
         reset_speed: out std_logic := '0'
     );
 ```
-For this block we use 3 inputs, in this case it gives the logic for adding points to each player
-### **LED_Loop: User Authentication**  
-```plaintext
-#Codigoooooooo 
-# Module 1: User Authentication
-def authenticate_user(username, password):
-    if username in users_db and users_db[username] == password:
-### **Module 1: User Authentication**  
+This block is intended to work as the logic for the loop of leds, it gives a puntuation system using the adding points vectors. Also gives control to the Loop from the last file.
+ ```vhdl
+        if (current_pos = length) then
+            reset_speed <= '1';
+                if score1 >= "1001" then
+                    score1 <= "0000";
+                    score2 <= "0000";
+                else
+                    score1 <= score1 + 1;
+                end if;
+                current_pos <= "1000"; 
 ```
-### **GameLogicLED: User Authentication**  
-```plaintext
-#Codigoooooooo 
-# Module 1: User Authentication
-def authenticate_user(username, password):
-    if username in users_db and users_db[username] == password:
-### **Module 1: User Authentication**  
+Everytime it reaches the end of player 2, adds up a point to player 1. If player reaches 10 points it resets meaning player 1 won.
+ ```vhdl
+        else
+            current_pos <= current_pos + 1;
+        end if;
 ```
-### **Game: User Authentication**  
-```plaintext
-#Codigoooooooo 
-# Module 1: User Authentication
-def authenticate_user(username, password):
-    if username in users_db and users_db[username] == password:
-### **Module 1: User Authentication**  
-```
-### **DisplayDecoder: User Authentication**  
-```plaintext
-#Codigoooooooo 
-# Module 1: User Authentication
-def authenticate_user(username, password):
-    if username in users_db and users_db[username] == password:
-### **Module 1: User Authentication**  
-```
-### **Basys3: User Authentication**  
-```plaintext
-#Codigoooooooo 
-# Module 6: User Authentication
-def authenticate_user(username, password):
-    if username in users_db and users_db[username] == password:
-### **Module 1: User Authentication**  
-```
-
+If it has not reached the end, keeps adding to the position. 
+Makes similar logic for player 2.
