@@ -40,7 +40,6 @@ Incluye una vista general de la estructura de archivos y carpetas del repositori
 ```
 ## **Description of Files and Folders**  
 Explication:
-- **Ports declaration**:
 - **LED_Loop**:
 - **GameLogicLED**:
 - **Game**:
@@ -49,7 +48,8 @@ Explication:
 
 ## **Code Explanation**  
 ### **LED Loop**
-Code for [LED_Loop](./src/LED_Loop.vhd)
+Code for [LED_Loop](./src/LED_Loop.vhd).
+
 **Ports declaration**
 ```vhdl
 entity LED_Loop is
@@ -61,7 +61,6 @@ entity LED_Loop is
 end LED_Loop;
 ```
 This file uses the clock provided from the Basys Board. Gets the divider signal from an external signal in order to slow down on a certain amount the LEDs movement.
-**Signals**
 ```vhdl
         CLK_out <= '0';
         if (counter >= divider) then
@@ -82,7 +81,8 @@ Everytime counter is reset, divider changes according to the stated value took f
 ```
 The counter is adding every time there is a rising edge. Meaning it will be slowed down or sped up according to divider.
 ### **LED Loop Logic**
-Code for [GameLogicLED](./src/GameLogicLED.vhd)
+Code for [GameLogicLED](./src/GameLogicLED.vhd).
+
 **Ports declaration**
 ```vhdl
 port(
@@ -115,7 +115,8 @@ Everytime it reaches the end of player 2, adds up a point to player 1. If player
 ```
 If it has not reached the end, keeps adding to the position. Makes similar logic for player 2.
 ### **7 Seg Display Decoder** 
-Code for [DisplayDecoder](./src/DisplayDecoder.vhd)
+Code for [DisplayDecoder](./src/DisplayDecoder.vhd).
+
 **Ports declaration**
 ```vhdl
 entity display_7seg is
@@ -138,7 +139,8 @@ Decoder gets a BCD number and sends a seven segment logic vector which is later 
 ```
 Every 0 of the vector is an active LED of the seven segment, in this case we had common anode segments. It can be changed to the preference of the developer. 
 ### **Display Logic**  
-Code for [ScoreDisplay](./src/ScoreDisplay.vhd)
+Code for [ScoreDisplay](./src/ScoreDisplay.vhd).
+
 **Ports declaration**
 ```vhdl
  Port (
@@ -176,8 +178,9 @@ display_a: display_7seg port map(
 ```
 The decoder from [DisplayDecoder](./src/DisplayDecoder.vhd) is used to decode the BCD vector into seven segment logic. Later the anode signal is connected to anode output.
 ### **Game Top Entity**
-Code for [Game](./src/Game.vhd)
+Code for [Game](./src/Game.vhd).
 Game is the top entity of our design, it is intended to have all the conections from the basys and implements a hard reset which sets all to 0. Commented line codes are not intended to be used.
+
 **Ports declaration**
 ```vhdl
     port(
@@ -212,7 +215,7 @@ Every time the player clicks, depending on the position it will have a different
 ```
 Led cases shows the position on the basys LED array. Basically decodes from BCD to vectorial position.
 ### **Constraints**  
-Code for [Basys 3](./src/Basys3.xdc)
+Code for [Basys 3](./src/Basys3.xdc).
 ```xdc
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property PACKAGE_PIN W5 [get_ports clk]
