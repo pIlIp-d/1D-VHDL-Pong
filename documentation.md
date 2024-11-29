@@ -15,12 +15,12 @@
 ---
 
 ## **Introduction**  
-Proporciona un resumen general del propósito de este documento.  
-- ¿Qué busca explicar?  
-- ¿Qué nivel de detalle se proporciona?  
-- ¿A quién está dirigido (desarrolladores, usuarios finales, etc.)?  
+A brief manual to the introduccion of game creation using FPGAs and self-learning of basic VHDL language. Very useful to understand how sequential and combinational logic works.
+- Explain hard-to-understand block codes or the logic behind them to get the user to a better understanding of it.
+- Explanation by blocks, not into a high level.
+- Aimed for VHDL beginner programmers.
 
-> Este documento describe la funcionalidad y estructura del código fuente incluido en este repositorio. Su objetivo es ayudar a los desarrolladores a entender las partes clave del proyecto y cómo estas interactúan entre sí.  
+> This document describes the functionality and structure of the design code compiled on this repository. It's purpose is to help developers to understand key points of it and how they work together.  
 
 ---
 
