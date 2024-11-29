@@ -29,11 +29,13 @@ Proporciona un resumen general del propósito de este documento.
 Incluye una vista general de la estructura de archivos y carpetas del repositorio, con una breve explicación de su contenido.  
 
 ```plaintext
-├── carpeta1/  
-│   ├── archivo1.py  # Breve descripción  
-│   ├── archivo2.py  # Breve descripción  
-├── carpeta2/  
-│   ├── archivo3.py  # Breve descripción  
+├── src/  
+│   ├── Basys3.xdc  		# Constraints for Basys 3 Board  
+│   ├── DisplayDecoder.vhd  	# BCD to Seven segment decoder
+│   ├── Game.vhd  		# Top Entity of the design    
+│   ├── GameLogicLED.vhd  	# LEDs Logic, for ball movement  
+│   ├── LED_Loop.vhd  		# LEDs Loop from the Basys 3 Board
+│   ├── ScoreDisplay.vhd  	# Logic for shown score on seven segment
 ├── README.md         # Instrucciones generales  
 ├── documentation.md  # Documentación detallada  
 ---
