@@ -30,8 +30,8 @@ Incluye una vista general de la estructura de archivos y carpetas del repositori
 ```plaintext
 ├── src/  
 │   ├── Basys3.xdc  		# Constraints for Basys 3 Board  
-│   ├── DisplayDecoder.vhd  	# BCD to Seven segment decoder
-│   ├── Game.vhd  		# Top Entity of the design    
+│   ├── DisplayDecoder.vhd  # BCD to Seven segment decoder
+│   ├── Game.vhd  		    # Top Entity of the design    
 │   ├── GameLogicLED.vhd  	# LEDs Logic, for ball movement  
 │   ├── LED_Loop.vhd  		# LEDs Loop from the Basys 3 Board
 │   ├── ScoreDisplay.vhd  	# Logic for shown score on seven segment
@@ -41,15 +41,15 @@ Incluye una vista general de la estructura de archivos y carpetas del repositori
 ---
 ## **Description of Files and Folders**  
 Explication:
-- **LED_Loop**: In this file, we have the logic to control the way of turning on the LEDs of the Basys3.It uses the signal of the clock and a divider to change and slow the movement of the LEDs. Basically the logic of this file makes sure that the LEDs change of state according to the signal of the clock and the divider. 
+- **LED_Loop**: In this file, we have the logic to control the way of turning on the LEDs of the Basys3. It uses the signal of the clock and a divider to control the speed of the movement of the LEDs. Basically the logic of this file makes sure that the LEDs state changes according to the signal of the clock and the divider.
+
+- **GameLogicLED**: In this file, we control the states of the LEDs used for the movement of the players inside of the game. Additionally, the score system that increases the score of each player when they reach certain values is contained here. It also allows to establish the speed of the LEDs and control the flow of the positions in the game. 
   
-- **GameLogicLED**: In this file, we made the logic of the LEDs used for the movement of the players inside of the game, also the system of points that increase the score of each player when they reach certain values. It also allows to establish the speed of the LEDs and control the flow of the positions in the game. 
+- **Game**: This file is the top entity of the design. Here all the connections of the different parts of the game come together from the buttons of the players, the control of the LEDs and the visualization of the score. We also implement a reset to reset the game to its initial state.
   
-- **Game**: This file is the top entity of the design. Here all the connections of the different parts of the game come together from the buttons of the players, the control of the LEDs and the visualization of the score, we also implement a reset to reset the game to its initial state. 
+- **DisplayDecoder**: This file is in charge of decoding the numbers that are in format BCD (decimal code coded in binary) to a compatible format for the 7-segment display of the Basys 3 by activating the correct segments according to what goes in.
   
-- **DisplayDecoder**: This file is in charge of decoding the numbers that are in format BCD (decimal code coded in binary) to a compatible format for the 7-segment display of the Basys 3 by activating the correct segments according to what goes in. 
-  
-- **Basys3**: This file, contains the restrictions of the Basys 3, it also defines how the different pines connect to the FPGA to the external components like the buttons, LEDs and displays. It also establishes the clock and other conditions for correct functionality in the Basys3. 
+- **Basys3**: This file, contains the restrictions of the Basys 3, it also defines how the different connections of the FPGA, to the external components like the buttons, LEDs and displays are routed. It also establishes the clock.
 
 ## **Code Explanation**  
 ### **LED Loop**
@@ -65,7 +65,7 @@ entity LED_Loop is
     );
 end LED_Loop;
 ```
-This file uses the clock provided from the Basys Board. Gets the divider signal from an external signal in order to slow down on a certain amount the LEDs movement.
+This file uses the clock provided by the Basys Board. It gets the divider signal from an external signal in order to slow down the LEDs movement by a certain amount.
 ```vhdl
         CLK_out <= '0';
         if (counter >= divider) then
@@ -74,7 +74,7 @@ This file uses the clock provided from the Basys Board. Gets the divider signal 
             end if;
         end if;
 ```
-Everytime counter is reset, divider changes according to the stated value took from the position.
+Everytime the counter is reset, the divider changes according to the stated value taken from the position.
 ```vhdl
             multiplicator_counter <= multiplicator_counter + 1;
             if (multiplicator_counter = divider_multiplicator) then
@@ -100,7 +100,7 @@ port(
         reset_speed: out std_logic := '0'
     );
 ```
-This block is intended to work as the logic for the loop of leds, it gives a puntuation system using the adding points vectors. Also gives control to the Loop from the last file.
+This block handles the logic for the loop of leds. It also handles the score system adding and returning the score back to the main game.vhd.
  ```vhdl
         if (current_pos = length) then
             reset_speed <= '1';
@@ -112,13 +112,13 @@ This block is intended to work as the logic for the loop of leds, it gives a pun
                 end if;
                 current_pos <= "1000"; 
 ```
-Everytime it reaches the end of player 2, adds up a point to player 1. If player reaches 10 points it resets meaning player 1 won.
+Everytime it reaches the end of player 2s side, it adds a point to player 1. If player reaches 10 points it resets meaning player 1 won.
  ```vhdl
         else
             current_pos <= current_pos + 1;
         end if;
 ```
-If it has not reached the end, keeps adding to the position. Makes similar logic for player 2.
+If it has not reached the end, it keeps adding to the position. Same logic applies for the other player.
 ### **7 Seg Display Decoder** 
 Code for [DisplayDecoder](./src/DisplayDecoder.vhd).
 
@@ -129,7 +129,7 @@ entity display_7seg is
            seg : out STD_LOGIC_VECTOR(6 downto 0));
 end display_7seg;  
 ```
-Decoder gets a BCD number and sends a seven segment logic vector which is later connected to the Basys board. 
+The decoder gets a BCD number and sends a seven segment logic vector which is later connected to the Basys board. 
 ```vhdl
             when "0000" => seg <= "1000000"; -- 0
             when "0001" => seg <= "1111001"; -- 1
@@ -158,7 +158,7 @@ Code for [ScoreDisplay](./src/ScoreDisplay.vhd).
         anode    : out std_logic_vector(3 downto 0) 
     );
 ```
-The logic uses the internal clock of the basys to coordinate the 4 digits to display. Every display declaration is a digit.
+The logic uses the internal clock of the basys to coordinate the 4 digits for the display. Every display declaration is a digit.
 ```vhdl
          when "00" =>
             anode_temp <= "1110";
@@ -184,7 +184,7 @@ display_a: display_7seg port map(
 The decoder from [DisplayDecoder](./src/DisplayDecoder.vhd) is used to decode the BCD vector into seven segment logic. Later the anode signal is connected to anode output.
 ### **Game Top Entity**
 Code for [Game](./src/Game.vhd).
-Game is the top entity of our design, it is intended to have all the conections from the basys and implements a hard reset which sets all to 0. Commented line codes are not intended to be used.
+Game is the top entity of our design, it is intended to have all the connections from the basys board and implements a hard reset which sets all to 0.
 
 **Ports declaration**
 ```vhdl
@@ -198,7 +198,7 @@ Game is the top entity of our design, it is intended to have all the conections 
         led : out std_logic_vector(15 downto 0)
     );
 ```
-Buttons as said, can be used from the basys. For comfort we used external buttons.
+As stated, buttons can either be the internal basys ones, or external ones for comfort.
 ```vhdl
       if clk'event and clk = '1' then
             if current_dir = '1' and btn_player2 = '1' and led_states >= "1000" then
@@ -209,7 +209,7 @@ Buttons as said, can be used from the basys. For comfort we used external button
                     when others => divider <= "11111111";
                 end case;
 ```
-Every time the player clicks, depending on the position it will have a different speed declared inside divider. Similar case for the other player. Having 3 different conditions allows to avoids bugs of double clicking from the same player.
+Every time the player clicks, depending on the position of the ball the bounce will have a different speed for the ball.
 ```vhdl
  case led_states is
             when "0000" => led <= "1000000000000000";
@@ -218,8 +218,8 @@ Every time the player clicks, depending on the position it will have a different
             when others => led <= "1111111111111111";
         end case;
 ```
-Led cases shows the position on the basys LED array. Basically decodes from BCD to vectorial position.
-### **Constraints**  
+Led cases shows converts the position to a single led that is turned on. (Demultiplexer)
+### **Constraints**
 Code for [Basys 3](./src/Basys3.xdc).
 ```xdc
 set_property PACKAGE_PIN W5 [get_ports clk]
@@ -227,7 +227,7 @@ set_property PACKAGE_PIN W5 [get_ports clk]
 	set_property IOSTANDARD LVCMOS33 [get_ports clk]
 	create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
 ```
-Clock from the Basys. Necessary to check for the manual of the board. In our case it works at 10MHz frequency.
+Clock from the Basys. It is Necessary to check the manual of the board, to find the operating frequency. In our case it works at 10MHz frequency.
 ```xdc
 set_property PACKAGE_PIN R2 [get_ports {RST}]
 	set_property IOSTANDARD LVCMOS33 [get_ports {RST}]
@@ -240,7 +240,7 @@ set_property PACKAGE_PIN U16 [get_ports {led[0]}]
 set_property PACKAGE_PIN L1 [get_ports {led[15]}]
 	set_property IOSTANDARD LVCMOS33 [get_ports {led[15]}]
 ```
-All the board LEDs were used to show the game loop. As we worked with vectors it is just neccesary to change the index of the declared vector. Can be changed to single standar logic data.
+All the board LEDs were used to show the game loop. As we worked with vectors it is just necessary to change the index of the declared vector. Can be changed to single standard logic data.
 ```xdc
 set_property PACKAGE_PIN W7 [get_ports {seg[0]}]
 	set_property IOSTANDARD LVCMOS33 [get_ports {seg[0]}]
@@ -254,20 +254,20 @@ set_property PACKAGE_PIN U2 [get_ports {an[0]}]
 set_property PACKAGE_PIN W4 [get_ports {an[3]}]
 	set_property IOSTANDARD LVCMOS33 [get_ports {an[3]}]
 ```
-The seven segment gets the 7 bit vector which corresponds to a line of the seven segment display. If not using the same board it is necessary to check board documentation also to know the common anodes configuration.
+The seven segment gets the 7 bit vector which corresponds to a line of the seven segment display. If you are not using the same board it is necessary to check board documentation also to know the common anode configuration.
 ```xdc
 set_property PACKAGE_PIN J3 [get_ports {btn_player2}]
 	set_property IOSTANDARD LVCMOS33 [get_ports {btn_player2}]
 set_property PACKAGE_PIN M2 [get_ports {btn_player1}]
 	set_property IOSTANDARD LVCMOS33 [get_ports {btn_player1}]
 ```
-We used external buttons so those were connected to inputs from the sides of the board. Using pull downs resistors is recommendated to connect into the voltage supply of the board.
+We used external buttons, so those were connected to inputs from the sides of the board. Using pull down resistors is recommended as well.
 ```xdc
 ## Configuration options
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
 ```
-Used configuration. Not neccesary to modify if working with the same board.
+Used configuration. Not necessary to modify if working with the same board.
 
 ---
 ## **References**
