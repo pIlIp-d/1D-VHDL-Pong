@@ -280,8 +280,8 @@ Used configuration. Not neccesary to modify if working with the same board.
   [Pong Game Example byIngeniería Electrónica Industrial Campus Jalpa]([https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?app=desktop&v=adN6mfCjHu4))
 
 
-- XYZ, A. (2020, mayo 5). *Cómo hacer un juego Pong en FPGA*. YouTube. https://www.youtube.com/watch?v=videoID
-   [Pong Game Example by XYZ](https://www.youtube.com/watch?v=videoID)
+-Robot UNO. (2020, July 9). PING-PONG con ARDUINO || MINIJUEGO CON ARDUINO || PROYECTO para PRINCIPIANTES[explicado paso a paso] [Video]. YouTube.[https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?v=ttuo--XyvzM)
+   [Pong Game Example by Robot UNO]([https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?v=ttuo--XyvzM))
 
 
 
