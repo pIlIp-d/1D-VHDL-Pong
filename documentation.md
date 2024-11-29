@@ -41,11 +41,15 @@ Incluye una vista general de la estructura de archivos y carpetas del repositori
 ---
 ## **Description of Files and Folders**  
 Explication:
-- **LED_Loop**: In this file, we have the logic to control the way of turning on the LEDs of the Basys3.It uses the signal of the clock and a divider to change and slow the movenet of the LEDs.Basically the logic of this file makes sure that the LEDs change of state acording to the signal of the clock and the divider.
-- **GameLogicLED**: In this file, we made the logic of the LEDs used for the movement of the players inside of the game, also the sistem of points that increase the score of each player when they reach to certain values. It also allows to stablish the speed of the LEDs and control the flow of the positions in the game.
-- **Game**:
-- **DisplayDecoder**:
-- **Basys3**:
+- **LED_Loop**: In this file, we have the logic to control the way of turning on the LEDs of the Basys3.It uses the signal of the clock and a divider to change and slow the movement of the LEDs. Basically the logic of this file makes sure that the LEDs change of state according to the signal of the clock and the divider. 
+  
+- **GameLogicLED**: In this file, we made the logic of the LEDs used for the movement of the players inside of the game, also the system of points that increase the score of each player when they reach certain values. It also allows to establish the speed of the LEDs and control the flow of the positions in the game. 
+  
+- **Game**: This file is the top entity of the design. Here all the connections of the different parts of the game come together from the buttons of the players, the control of the LEDs and the visualization of the score, we also implement a reset to reset the game to its initial state. 
+  
+- **DisplayDecoder**: This file is in charge of decoding the numbers that are in format BCD (decimal code coded in binary) to a compatible format for the 7-segment display of the Basys 3 by activating the correct segments according to what goes in. 
+  
+- **Basys3**: This file, contains the restrictions of the Basys 3, it also defines how the different pines connect to the FPGA to the external components like the buttons, LEDs and displays. It also establishes the clock and other conditions for correct functionality in the Basys3. 
 
 ## **Code Explanation**  
 ### **LED Loop**
