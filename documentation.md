@@ -10,8 +10,7 @@
    - [GameLogicLED](#GameLogicLED)
    - [Game](#Game)
    - [DisplayDecoder](#DisplayDecoder)
-   - [Basys3](#Basys3)
-5. [Evidence](#evidence)  
+   - [Basys3](#Basys3) 
 6. [References](#references)
 ---
 
@@ -265,3 +264,4 @@ set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
 ```
 Used configuration. Not neccesary to modify if working with the same board.
+## **References**
