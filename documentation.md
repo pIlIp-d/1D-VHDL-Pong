@@ -37,8 +37,8 @@ Incluye una vista general de la estructura de archivos y carpetas del repositori
 │   ├── ScoreDisplay.vhd  	# Logic for shown score on seven segment
 ├── README.md         # Instrucciones generales  
 ├── documentation.md  # Documentación detallada  
----
 ```
+---
 ## **Description of Files and Folders**  
 Explication:
 - **LED_Loop**:
@@ -264,4 +264,5 @@ set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
 ```
 Used configuration. Not neccesary to modify if working with the same board.
+---
 ## **References**
