@@ -271,3 +271,18 @@ Used configuration. Not neccesary to modify if working with the same board.
 
 ---
 ## **References**
+
+- PensActius. (2018, February 23). Juego PONG  con tira de leds y arduino [Video].Youtube  [https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?v=Q-6n0XncaWE)
+  [Pong Game Example by PensActius]([https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?v=Q-6n0XncaWE))
+
+
+-Ingeniería Electrónica Industrial Campus Jalpa. (2020, May 19). Juego Pong IEI Juego Arduino Impresión 3D [Video].YouTube.[https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?app=desktop&v=adN6mfCjHu4)
+  [Pong Game Example byIngeniería Electrónica Industrial Campus Jalpa]([https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?app=desktop&v=adN6mfCjHu4))
+
+
+- XYZ, A. (2020, mayo 5). *Cómo hacer un juego Pong en FPGA*. YouTube. https://www.youtube.com/watch?v=videoID
+   [Pong Game Example by XYZ](https://www.youtube.com/watch?v=videoID)
+
+
+
+
