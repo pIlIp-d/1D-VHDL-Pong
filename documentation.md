@@ -276,11 +276,11 @@ Used configuration. Not necessary to modify if working with the same board.
   [Pong Game Example by PensActius]([https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?v=Q-6n0XncaWE))
 
 
--Ingeniería Electrónica Industrial Campus Jalpa. (2020, May 19). Juego Pong IEI Juego Arduino Impresión 3D [Video].YouTube.[https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?app=desktop&v=adN6mfCjHu4)
+- Ingeniería Electrónica Industrial Campus Jalpa. (2020, May 19). Juego Pong IEI Juego Arduino Impresión 3D [Video].YouTube.[https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?app=desktop&v=adN6mfCjHu4)
   [Pong Game Example byIngeniería Electrónica Industrial Campus Jalpa]([https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?app=desktop&v=adN6mfCjHu4))
 
 
--Robot UNO. (2020, July 9). PING-PONG con ARDUINO || MINIJUEGO CON ARDUINO || PROYECTO para PRINCIPIANTES[explicado paso a paso] [Video]. YouTube.[https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?v=ttuo--XyvzM)
+- Robot UNO. (2020, July 9). PING-PONG con ARDUINO || MINIJUEGO CON ARDUINO || PROYECTO para PRINCIPIANTES[explicado paso a paso] [Video]. YouTube.[https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?v=ttuo--XyvzM)
    [Pong Game Example by Robot UNO]([https://www.youtube.com/watch?v=videoID](https://www.youtube.com/watch?v=ttuo--XyvzM))
 
 
