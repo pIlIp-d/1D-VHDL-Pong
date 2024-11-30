@@ -2,7 +2,6 @@
 Hands-on 1D Pong game development using VHDL and the Basys 3, perfect for beginners in FPGA design.
 
 ![An image showcaseing the Basys-3 Board with a breadboard for the buttons.](./showcase.jpg)
-![A video showing some gameplay](./gameplay.mp4)
 
 
 # Preperations and Usage 
