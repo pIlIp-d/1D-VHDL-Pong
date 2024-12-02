@@ -25,7 +25,7 @@ A brief manual to the introduccion of game creation using FPGAs and self-learnin
 ---
 
 ## **Project Structure**  
-Incluye una vista general de la estructura de archivos y carpetas del repositorio, con una breve explicación de su contenido.  
+It includes a general view of the structure of the files on the repository, with a brief explanation of it´s content.
 
 ```plaintext
 ├── src/  
