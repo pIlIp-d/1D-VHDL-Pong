@@ -63,4 +63,5 @@ This project was created by:
 * Adrián Rodríguez Godínez - 179784
 * Ian Carlo Vicente Aburto - 182598
 * Ana Paola Vargas González - 180549
+  ana.vargasgz@udlap.mx
 * Philip Dell - 186247
