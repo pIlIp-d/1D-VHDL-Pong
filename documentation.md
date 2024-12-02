@@ -40,7 +40,7 @@ It includes a general view of the structure of the files on the repository, with
 ```
 ---
 ## **Description of Files and Folders**  
-Explication:
+Explanation:
 - **LED_Loop**: In this file, we have the logic to control the way of turning on the LEDs of the Basys3. It uses the signal of the clock and a divider to control the speed of the movement of the LEDs. Basically the logic of this file makes sure that the LEDs state changes according to the signal of the clock and the divider.
 
 - **GameLogicLED**: In this file, we control the states of the LEDs used for the movement of the players inside of the game. Additionally, the score system that increases the score of each player when they reach certain values is contained here. It also allows to establish the speed of the LEDs and control the flow of the positions in the game. 
